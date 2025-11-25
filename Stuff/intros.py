@@ -12,8 +12,7 @@ from time import sleep
 from common import InstructionsFrame
 from gui import GUI
 
-from constants import BONUS, PARTICIPATION_FEE, URL, PREDICTION_BONUS
-from cheating import Login
+from constants import URL
 
 
 ################################################################################

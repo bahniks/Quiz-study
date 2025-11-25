@@ -13,7 +13,7 @@ import random
 from common import ExperimentFrame, InstructionsFrame, read_all
 from gui import GUI
 
-from constants import BONUS, TESTING
+from constants import TESTING
 
 
 ################################################################################
@@ -26,13 +26,10 @@ Každou otázku si pečlivě přečtěte. Snažte se však na otázky nemyslet p
 
 attentiontext = "Chcete-li prokázat, že zadání věnujete pozornost, vyberte možnost "
 
-hexacoinstructions = """Na následujících stránkách najdete řadu prohlášení o Vaší osobě.
 
-Přečtěte si prosím každé prohlášení a rozhodněte se, do jaké míry s ním souhlasíte, nebo nesouhlasíte.
-"""
+mindsetInstructions = """Please read the following statements carefully and indicate the extent to which you agree or disagree using the scale below."""
 
-bonusGained = f"Protože jste odpověděl(a) správně na všechny kontrolní otázky, získáváte dalších {BONUS} Kč."
-bonusNotGained = f"Protože jste neodpověděl(a) správně na všechny kontrolní otázky, nezískáváte dalších {BONUS} Kč."
+
 ################################################################################
 
 
@@ -76,7 +73,7 @@ class Quest(ExperimentFrame):
                 self.questions.insert(positions[i], attentiontext + str(random.randint(1, options)) + ".")
 
         ttk.Style().configure("TButton", font = "helvetica 15")
-        self.next = ttk.Button(self, text = "Pokračovat", command = self.nextFun, state = "disabled")
+        self.next = ttk.Button(self, text = "Continue", command = self.nextFun, state = "disabled")
         self.next.grid(row = self.perpage*2 + 4, column = 1)
 
         self.rowconfigure(0, weight = 1)
@@ -205,29 +202,19 @@ class Likert(Canvas):
         self.root.check()
 
 
-class Hexaco(Quest):
+class Mindset(Quest):
     def __init__(self, root):
-        super().__init__(root, 9, "hexaco.txt", "Hexaco", instructions = hexacoinstructions, width = 85,
-                         left = "silně nesouhlasím", right = "silně souhlasím",
-                         height = 3, options = 5, center = True)
+        super().__init__(root, 9, "mindset.txt", "Mindset", instructions = mindsetInstructions, width = 85,
+                         left = "Strongly agree", right = "Strongly disagree",
+                         height = 3, options = 6, center = True)
         
         
-# polwillintro = "Označte, do jaké míry souhlasíte s následujícímí tvrzeními, na poskytnuté škále."
-
-# class PoliticalWill(Quest):
-#     def __init__(self, root):
-#         super().__init__(root, 9, "polwill.txt", "Political Will", instructions = polwillintro, width = 85,
-#                          left = "Zcela nesouhlasím", right = "Zcela souhlasím",
-#                          height = 3, options = 7, center = True)
 
 
 
-
-
-QuestInstructions = (InstructionsFrame, {"text": questintro, "height": 15})
+#QuestInstructions = (InstructionsFrame, {"text": questintro, "height": 15})
 
 
 if __name__ == "__main__":
     os.chdir(os.path.dirname(os.getcwd()))
-    GUI([QuestInstructions, Hexaco
-         ])
+    GUI([Mindset])

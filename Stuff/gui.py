@@ -10,7 +10,7 @@ import urllib.parse
 import os
 import json
 
-from constants import TESTING, URL, GOTHROUGH, PARTICIPATION_FEE
+from constants import TESTING, URL, GOTHROUGH
 from common import change_keyboard_layout
 
 
@@ -49,7 +49,8 @@ class GUI(Tk):
         self.texts = defaultdict(str)
         self.status = defaultdict(str)
         self.status["logged"] = False
-        self.status["reward"] = PARTICIPATION_FEE
+        #self.status["reward"] = PARTICIPATION_FEE
+        self.status["reward"] = 0
         self.status["results"] = []
 
         self.count = -1

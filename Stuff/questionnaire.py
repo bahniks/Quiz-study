@@ -15,13 +15,8 @@ from constants import TESTING, AUTOFILL
 
 intro = "Označte, do jaké míry souhlasíte s následujícímí tvrzeními, na poskytnuté škále."
 
-TEQintro = """Přečtěte si pečlivě každé z následujících tvrzení a ohodnoťte, jak často cítíte nebo jednáte způsobem, který je popsán. 
-Své odpovědi označte ve formuláři. Neexistují správné nebo špatné odpovědi ani záludné otázky. 
-Prosím, odpovídejte na každou otázku co nejupřímněji, jak jen můžete."""
+MindsetIntro = """Please read the following statements carefully and indicate the extent to which you agree or disagree using the scale below."""
 
-RSMSintro = """Přečtěte si pečlivě každé z následujících tvrzení a ohodnoťte, jak často je tvrzení o Vás pravdivé."""
-
-polwillintro = "Označte, do jaké míry souhlasíte s následujícímí tvrzeními, na poskytnuté škále."
 
 
 
@@ -195,40 +190,6 @@ TDMS = (Questionnaire,
                  "labelFontsize": 13,
                  })
 
-TEQ = (Questionnaire,
-                {"words": "teq.txt",
-                 "question": TEQintro,
-                 "labels": ["Nikdy",
-                            "Zřídka",
-                            "Někdy",
-                            "Často",
-                            "Vždy"],
-                 "values": 5,
-                 "labelwidth": 6,
-                 "text": False,
-                 "fontsize": 14,
-                 "blocksize": 4,
-                 "filetext": "TEQ"})
-
-PoliticalWill = (Questionnaire,
-                {"words": "polwill.txt",
-                 "question": polwillintro,
-                 "labels": ["Zcela\nnesouhlasím",
-                            "Nesouhlasím",
-                            "Mírně\nnesouhlasím",
-                            "Neutrální",
-                            "Mírně\nsouhlasím",
-                            "Souhlasím",
-                            "Zcela\nsouhlasím"],
-                 "values": 7,
-                 "labelwidth": 11,
-                 "text": False,
-                 "fontsize": 13,
-                 "blocksize": 9,
-                 "wraplength": 450,
-                 "filetext": "Political Will",
-                 "fixedlines": 2,
-                 "pady": 3})
 
 
 if __name__ == "__main__":

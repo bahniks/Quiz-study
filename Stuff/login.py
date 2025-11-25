@@ -15,7 +15,7 @@ import urllib.parse
 
 from common import InstructionsFrame
 from gui import GUI
-from constants import TESTING, URL, PARTICIPATION_FEE, PREDICTION_BONUS, COEFFICIENTS
+from constants import TESTING, URL
 
 
 
