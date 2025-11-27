@@ -17,10 +17,10 @@ from overconfidence import Overconfidence
 from quiz import Quiz
 
 frames = [Login,
-          Intro,     
+          Intro,   
+          Mindset,  
           Quiz,     
-          Overconfidence,
-          Mindset,
+          Overconfidence,          
           Demographics,
           Ending
          ]

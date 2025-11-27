@@ -19,7 +19,7 @@ from constants import URL
 # TEXTS
 intro = """Welcome to the next part of the study.
 
-In this part, you will first receive a short general knowledge quiz. Then you will answer questions regarding your attitudes and opinions. This part should take approximately 5-10 minutes.
+In this part, you will first answer questions regarding your views. Afterward, you will receive a short general knowledge quiz.This part should take approximately 5-10 minutes.
 
 Press the "Continue" button."""
 
