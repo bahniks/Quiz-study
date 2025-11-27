@@ -15,9 +15,13 @@ from constants import TESTING
 
 
 
-question1 = "How many questions do you think you answered correctly?"
-question2 = """Compared to other participants, where do you think your performance on this test is?
-(Please enter a number from 0 to 99, with 50 representing the average participant.)"""
+question1 = "How many out of the ten questions do you think you answered correctly?"
+question2 = """How do you think your performance on this test compares to that of other participants in this study?
+
+Please estimate your percentile score by entering a number from 0 to 99, where:
+• 0 means you performed worse than all other participants
+• 99 means you performed better than all other participants  
+• 50 represents the average performance of all participants"""
 
 
 
@@ -57,7 +61,7 @@ class Overconfidence(ExperimentFrame):
         self.question2Frame = Canvas(self, background = "white", highlightbackground = "white", highlightcolor = "white")
         
         self.question2Text = Text(self.question2Frame, font = "helvetica 15", relief = "flat", background = "white",
-                         width = 80, height = 3, pady = 7, wrap = "word")
+                         width = 80, height = 7, pady = 7, wrap = "word")
         self.question2Text.grid(row = 0, column = 1, columnspan = 2, sticky = S, pady = 10)
         self.question2Text.tag_configure("center", justify = "center")
         self.question2Text.insert("1.0", question2, "center")

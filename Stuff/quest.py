@@ -27,7 +27,7 @@ Každou otázku si pečlivě přečtěte. Snažte se však na otázky nemyslet p
 attentiontext = "Chcete-li prokázat, že zadání věnujete pozornost, vyberte možnost "
 
 
-mindsetInstructions = """Please read the following statements carefully and indicate the extent to which you agree or disagree using the scale below."""
+mindsetInstructions = """Please read the following statements carefully and indicate the extent to which you agree or disagree using the provided scale."""
 
 
 ################################################################################

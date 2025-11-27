@@ -13,7 +13,7 @@ from common import InstructionsFrame
 from gui import GUI
 
 
-intro = "Uveďte své demografické údaje."
+intro = "Please provide your demographic information."
 
 
 class Demographics(InstructionsFrame):
@@ -26,41 +26,41 @@ class Demographics(InstructionsFrame):
         self.age = StringVar()
         self.student = StringVar()
         self.field = StringVar()
-        self.field.set("Nestuduji VŠ")
+        self.field.set("Not a university student")
 
-        self.lab1 = ttk.Label(self, text = "Pohlaví:", background = "white",
+        self.lab1 = ttk.Label(self, text = "Gender:", background = "white",
                               font = "helvetica 15")
         self.lab1.grid(column = 1, row = 1, pady = 2, sticky = W, padx = 2)
-        self.lab2 = ttk.Label(self, text = "Věk:", background = "white",
+        self.lab2 = ttk.Label(self, text = "Age:", background = "white",
                               font = "helvetica 15")
         self.lab2.grid(column = 1, row = 2, pady = 2, sticky = W, padx = 2)        
-        self.lab3 = ttk.Label(self, text = "Mateřský jazyk:  ", background = "white",
+        self.lab3 = ttk.Label(self, text = "Native language:  ", background = "white",
                               font = "helvetica 15")
         self.lab3.grid(column = 1, row = 3, pady = 2, sticky = W, padx = 2)
-        self.lab5 = ttk.Label(self, text = "Studujete VŠ?  ", background = "white",
+        self.lab5 = ttk.Label(self, text = "Are you a university student?  ", background = "white",
                               font = "helvetica 15")
         self.lab5.grid(column = 1, row = 5, pady = 2, sticky = W, padx = 2)
-        self.lab6 = ttk.Label(self, text = "Pokud ano, jaký obor? ", background = "white",
+        self.lab6 = ttk.Label(self, text = "If yes, what field? ", background = "white",
                               font = "helvetica 15")
         self.lab6.grid(column = 1, row = 6, pady = 2, sticky = W, padx = 2)
         
-        self.male = ttk.Radiobutton(self, text = "muž", variable = self.sex, value = "male",
+        self.male = ttk.Radiobutton(self, text = "male", variable = self.sex, value = "male",
                                     command = self.checkAllFilled)
-        self.female = ttk.Radiobutton(self, text = "žena", variable = self.sex,
+        self.female = ttk.Radiobutton(self, text = "female", variable = self.sex,
                                       value = "female", command = self.checkAllFilled)
-        self.otherSex = ttk.Radiobutton(self, text = "jiné", variable = self.sex,
+        self.otherSex = ttk.Radiobutton(self, text = "other", variable = self.sex,
                                       value = "other", command = self.checkAllFilled)
 
-        self.czech = ttk.Radiobutton(self, text = "český", variable = self.language,
+        self.czech = ttk.Radiobutton(self, text = "Czech", variable = self.language,
                                      value = "czech", command = self.checkAllFilled)
-        self.slovak = ttk.Radiobutton(self, text = "slovenský", variable = self.language,
+        self.slovak = ttk.Radiobutton(self, text = "Slovak", variable = self.language,
                                      value = "slovak", command = self.checkAllFilled)
-        self.other = ttk.Radiobutton(self, text = "jiný", variable = self.language,
+        self.other = ttk.Radiobutton(self, text = "other", variable = self.language,
                                      value = "other", command = self.checkAllFilled)
 
-        self.yes = ttk.Radiobutton(self, text = "ano", variable = self.student,
+        self.yes = ttk.Radiobutton(self, text = "yes", variable = self.student,
                                      value = "student", command = self.checkAllFilled)
-        self.no = ttk.Radiobutton(self, text = "ne", variable = self.student,
+        self.no = ttk.Radiobutton(self, text = "no", variable = self.student,
                                     value = "nostudent", command = self.checkAllFilled)
 
         ttk.Style().configure("TRadiobutton", background = "white", font = "helvetica 15")
@@ -73,18 +73,18 @@ class Demographics(InstructionsFrame):
 
         self.fieldCB = ttk.Combobox(self, textvariable = self.field, width = 25,
                                     font = "helvetica 15", state = "readonly")
-        self.fieldCB["values"] = ["Nestuduji VŠ",
-                                  "Ekonomie / management",
-                                  "Jazyky / mezinárodní studia",
-                                  "Kultura / umění",
-                                  "Medicína / farmacie",
-                                  "Právo / veřejná správa",
-                                  "Přírodní vědy",
-                                  "Technika / informatika",
-                                  "Učitelství / sport",
-                                  "Zemědělství / veterina",
-                                  "Humanitní / společenské vědy",
-                                  "Jiné"]
+        self.fieldCB["values"] = ["Not a university student",
+                                  "Economics / management",
+                                  "Languages / international studies",
+                                  "Culture / arts",
+                                  "Medicine / pharmacy",
+                                  "Law / public administration",
+                                  "Natural sciences",
+                                  "Engineering / computer science",
+                                  "Education / sports",
+                                  "Agriculture / veterinary",
+                                  "Humanities / social sciences",
+                                  "Other"]
         self.fieldCB.bind("<<ComboboxSelected>>", lambda e: self.checkAllFilled())
 
         self.male.grid(column = 2, row = 1, pady = 7, padx = 7, sticky = W)
