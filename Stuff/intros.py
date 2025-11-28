@@ -28,7 +28,7 @@ ending = """This was the last task of the study.
 
 The results of the experiment will be freely available on the Decision Lab website at the Faculty of Business Administration shortly after data evaluation and publication of the results. We ask you not to disclose the details of this study to potential participants, so that their choices and answers are not influenced and invalidated.
   
-You can take all your belongings, the completed payment document, and without disturbing other participants, go to the next room to the research assistant, from whom you will receive your reward. 
+You can take all your belongings, the completed payment documents (two filled in copies of the contract), and without disturbing other participants, go to the next room to the research assistant, from whom you will receive your reward. 
 
 This is the end of the experiment. Thank you for your participation!
  
